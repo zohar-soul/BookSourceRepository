@@ -8,6 +8,7 @@
         "list": "$.data",
         "name": "$.name",
         "author": "$.author",
+        "cover": "$.photoPath@replace->https://book.chengxinqinye.com/book${this}",
         "detail": "$.id@replace->/book/info?bookId=${this}@header->Seq:3b28f4be398947da273c3d1ec2c2fb8b"
     },
     "detail": {
