@@ -21,7 +21,6 @@
     },
     "catalog": {
         "list": "#all-chapter > div > div > div > div > a",
-        "orderBy": 0,
         "name": "a",
         "chapter": "a"
     },
