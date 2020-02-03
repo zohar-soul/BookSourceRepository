@@ -1,7 +1,7 @@
 {
     "name": "起点中文网",
     "url": "m.test.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://m.qidian.com/majax/search/list?kw=${key}",
         "list": "$..records[*]",
