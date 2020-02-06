@@ -1,41 +1,15 @@
 {
-    "name": "起点中文网",
-    "url": "m.test.com",
-    "version": 100,
-    "search": {
-        "url": "https://m.qidian.com/majax/search/list?kw=${key}",
-        "list": "$..records[*]",
-        "name": "$.bName",
-        "author": "$.bAuth",
-        "cover": "$.imgUrl",
-        "summary": "$.desc",
-        "detail": "/book/${$.bid}"
-    },
-    "detail": {
-        "status": ".book-meta:nth-child(5)@match->(?<=\\|)(.+)",
-        "update": "#ariaMuLu@match->(.+)(?=·)",
-        "lastChapter": "#ariaMuLu@match->(?<=·连载至)(.+)",
-        "catalog": "/majax/book/category?bookId=${#bookDetailWrapper@attr->data-book-id}"
-    },
-    "catalog": {
-        "list": "$..vs[*]",
-        "booklet": {
-            "name": "$.vN",
-            "list": "$.cs[*]"
-        },
-        "name": "$.cN",
-        "chapter": "/majax/chapter/getChapterInfo?bookId=${$params.bookId}&chapterId=${$.id}"
-    },
-    "chapter": {
-        "content": "$..content"
-    },
-    "auth": {
-        "login": "https://passport.yuewen.com/yuewen.html?areaid=1&appid=13&source=m",
-        "cookie": "qidian.com",
-        "params": "_csrfToken=${_csrfToken}",
-        "verify": "https://m.qidian.com/user",
-        "logged": "#logout@equal->退出登录",
-        "vip": "$..vipStatus@equal->1",
-        "buy": "$..isBuy@equal->1"
-    }
+  "name": "yuedu.best",
+  "url": "yuedu.best",
+  "version": 100,
+  "search": {
+    "url": "http://api.yuedu.best/yuedu/searchBook@post->json={\"key\":\"${key}\", \"bookSourceCode\":\"991420c1d5cef9cf5ef10d2207a8c0e1\"}",
+    "charset": "utf-8",
+    "list": "$.[*]",
+    "name": "$.name",
+    "author": "$.author",
+    "cover": "$.coverUrl",
+    "summary": "$.intro",
+    "detail": "/yuedu/getBookInfo@post->json={\"searchBook\":\"$.[*]}\", \"bookSourceCode\":\"991420c1d5cef9cf5ef10d2207a8c0e1\"}"
+  }
 }
