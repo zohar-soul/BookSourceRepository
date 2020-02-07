@@ -28,5 +28,6 @@
     "chapter": "http://api.yuedu.best/yuedu/getContent@post->{\"bookChapter\":${$}, \"bookSourceCode\":\"991420c1d5cef9cf5ef10d2207a8c0e1\"}"
   },
   "chapter": {
+    "content": "$.text"
   }
 }
