@@ -1,0 +1,33 @@
+{
+  "name": "铅笔小说 by [yuedu.best]",
+  "url": "https://www.x23qb.com",
+  "version": 100,
+  "search": {
+    "url": "http://api.yuedu.best/yuedu/searchBook@post->{\"key\":\"${key}\", \"bookSourceCode\":\"7faccda0f99a38df1a393d2a56083242\"}",
+    "charset": "utf-8",
+    "list": "$.[*]",
+    "name": "$.name",
+    "author": "$.author",
+    "cover": "$.coverUrl",
+    "summary": "$.intro",
+    "detail": "http://api.yuedu.best/yuedu/getBookInfo@post->{\"searchBook\":${$}, \"bookSourceCode\":\"7faccda0f99a38df1a393d2a56083242\"}"
+  },
+  "detail": {
+    "name": "$.name",
+    "author": "$.author",
+    "cover": "$.coverUrl",
+    "summary": "$.intro",
+    "status": "",
+    "update": "$.latestChapterTime",
+    "lastChapter": "$.latestChapterTitle",
+    "catalog": "http://api.yuedu.best/yuedu/getChapterList@post->{\"book\":${$}, \"bookSourceCode\":\"7faccda0f99a38df1a393d2a56083242\"}"
+  },
+  "catalog": {
+    "list": "$.[*]",
+    "name": "$.title",
+    "chapter": "http://api.yuedu.best/yuedu/getContent@post->{\"bookChapter\":${$}, \"bookSourceCode\":\"7faccda0f99a38df1a393d2a56083242\"}"
+  },
+  "chapter": {
+    "content": "$.text"
+  }
+}

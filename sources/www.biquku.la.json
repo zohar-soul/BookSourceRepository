@@ -1,0 +1,33 @@
+{
+  "name": "笔趣阁 biquku by [yuedu.best]",
+  "url": "http://www.biquku.la",
+  "version": 100,
+  "search": {
+    "url": "http://api.yuedu.best/yuedu/searchBook@post->{\"key\":\"${key}\", \"bookSourceCode\":\"14bb6f88ea1b407d304f61c3e0f305b2\"}",
+    "charset": "utf-8",
+    "list": "$.[*]",
+    "name": "$.name",
+    "author": "$.author",
+    "cover": "$.coverUrl",
+    "summary": "$.intro",
+    "detail": "http://api.yuedu.best/yuedu/getBookInfo@post->{\"searchBook\":${$}, \"bookSourceCode\":\"14bb6f88ea1b407d304f61c3e0f305b2\"}"
+  },
+  "detail": {
+    "name": "$.name",
+    "author": "$.author",
+    "cover": "$.coverUrl",
+    "summary": "$.intro",
+    "status": "",
+    "update": "$.latestChapterTime",
+    "lastChapter": "$.latestChapterTitle",
+    "catalog": "http://api.yuedu.best/yuedu/getChapterList@post->{\"book\":${$}, \"bookSourceCode\":\"14bb6f88ea1b407d304f61c3e0f305b2\"}"
+  },
+  "catalog": {
+    "list": "$.[*]",
+    "name": "$.title",
+    "chapter": "http://api.yuedu.best/yuedu/getContent@post->{\"bookChapter\":${$}, \"bookSourceCode\":\"14bb6f88ea1b407d304f61c3e0f305b2\"}"
+  },
+  "chapter": {
+    "content": "$.text"
+  }
+}

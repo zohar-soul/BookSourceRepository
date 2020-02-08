@@ -1,0 +1,33 @@
+{
+  "name": "全小说 by [yuedu.best]",
+  "url": "https://qxs.la",
+  "version": 100,
+  "search": {
+    "url": "http://api.yuedu.best/yuedu/searchBook@post->{\"key\":\"${key}\", \"bookSourceCode\":\"9977abd0593cd0d5bbadd67ac73104c8\"}",
+    "charset": "utf-8",
+    "list": "$.[*]",
+    "name": "$.name",
+    "author": "$.author",
+    "cover": "$.coverUrl",
+    "summary": "$.intro",
+    "detail": "http://api.yuedu.best/yuedu/getBookInfo@post->{\"searchBook\":${$}, \"bookSourceCode\":\"9977abd0593cd0d5bbadd67ac73104c8\"}"
+  },
+  "detail": {
+    "name": "$.name",
+    "author": "$.author",
+    "cover": "$.coverUrl",
+    "summary": "$.intro",
+    "status": "",
+    "update": "$.latestChapterTime",
+    "lastChapter": "$.latestChapterTitle",
+    "catalog": "http://api.yuedu.best/yuedu/getChapterList@post->{\"book\":${$}, \"bookSourceCode\":\"9977abd0593cd0d5bbadd67ac73104c8\"}"
+  },
+  "catalog": {
+    "list": "$.[*]",
+    "name": "$.title",
+    "chapter": "http://api.yuedu.best/yuedu/getContent@post->{\"bookChapter\":${$}, \"bookSourceCode\":\"9977abd0593cd0d5bbadd67ac73104c8\"}"
+  },
+  "chapter": {
+    "content": "$.text"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "UC书盟 by [yuedu.best]",
+  "url": "https://www.uctxt.com",
+  "version": 100,
+  "search": {
+    "url": "http://api.yuedu.best/yuedu/searchBook@post->{\"key\":\"${key}\", \"bookSourceCode\":\"249525c92c5102c435eef79ef1a59ca1\"}",
+    "charset": "utf-8",
+    "list": "$.[*]",
+    "name": "$.name",
+    "author": "$.author",
+    "cover": "$.coverUrl",
+    "summary": "$.intro",
+    "detail": "http://api.yuedu.best/yuedu/getBookInfo@post->{\"searchBook\":${$}, \"bookSourceCode\":\"249525c92c5102c435eef79ef1a59ca1\"}"
+  },
+  "detail": {
+    "name": "$.name",
+    "author": "$.author",
+    "cover": "$.coverUrl",
+    "summary": "$.intro",
+    "status": "",
+    "update": "$.latestChapterTime",
+    "lastChapter": "$.latestChapterTitle",
+    "catalog": "http://api.yuedu.best/yuedu/getChapterList@post->{\"book\":${$}, \"bookSourceCode\":\"249525c92c5102c435eef79ef1a59ca1\"}"
+  },
+  "catalog": {
+    "list": "$.[*]",
+    "name": "$.title",
+    "chapter": "http://api.yuedu.best/yuedu/getContent@post->{\"bookChapter\":${$}, \"bookSourceCode\":\"249525c92c5102c435eef79ef1a59ca1\"}"
+  },
+  "chapter": {
+    "content": "$.text"
+  }
+}

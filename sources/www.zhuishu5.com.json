@@ -1,0 +1,33 @@
+{
+  "name": "追书网 zhuishu5 by [yuedu.best]",
+  "url": "https://www.zhuishu5.com",
+  "version": 100,
+  "search": {
+    "url": "http://api.yuedu.best/yuedu/searchBook@post->{\"key\":\"${key}\", \"bookSourceCode\":\"a9c23ea4c126fb553bd91a498704db61\"}",
+    "charset": "utf-8",
+    "list": "$.[*]",
+    "name": "$.name",
+    "author": "$.author",
+    "cover": "$.coverUrl",
+    "summary": "$.intro",
+    "detail": "http://api.yuedu.best/yuedu/getBookInfo@post->{\"searchBook\":${$}, \"bookSourceCode\":\"a9c23ea4c126fb553bd91a498704db61\"}"
+  },
+  "detail": {
+    "name": "$.name",
+    "author": "$.author",
+    "cover": "$.coverUrl",
+    "summary": "$.intro",
+    "status": "",
+    "update": "$.latestChapterTime",
+    "lastChapter": "$.latestChapterTitle",
+    "catalog": "http://api.yuedu.best/yuedu/getChapterList@post->{\"book\":${$}, \"bookSourceCode\":\"a9c23ea4c126fb553bd91a498704db61\"}"
+  },
+  "catalog": {
+    "list": "$.[*]",
+    "name": "$.title",
+    "chapter": "http://api.yuedu.best/yuedu/getContent@post->{\"bookChapter\":${$}, \"bookSourceCode\":\"a9c23ea4c126fb553bd91a498704db61\"}"
+  },
+  "chapter": {
+    "content": "$.text"
+  }
+}

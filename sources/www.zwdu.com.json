@@ -1,6 +1,6 @@
 {
-  "name": "yuedu.best",
-  "url": "yuedu.best",
+  "name": "八一中文网 by [yuedu.best]",
+  "url": "https://www.zwdu.com",
   "version": 100,
   "search": {
     "url": "http://api.yuedu.best/yuedu/searchBook@post->{\"key\":\"${key}\", \"bookSourceCode\":\"991420c1d5cef9cf5ef10d2207a8c0e1\"}",
