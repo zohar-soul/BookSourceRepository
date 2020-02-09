@@ -1,7 +1,7 @@
 {
   "name": "雅文小说 [自动转换]",
   "url": "https://www.yawen365.com",
-  "version": 100,
+  "version": 101,
   "search": {
     "url": "http://api.yuedu.best/yuedu/searchBook@post->{\"key\":\"${key}\", \"bookSourceCode\":\"ef2f7e3cb84a29bcdb6e685b9aa48b04\"}",
     "charset": "utf-8",
