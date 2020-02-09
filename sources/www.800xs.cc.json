@@ -1,7 +1,7 @@
 {
   "name": "800小说网 [自动转换]",
   "url": "https://www.800xs.cc",
-  "version": 100,
+  "version": 101,
   "search": {
     "url": "http://api.yuedu.best/yuedu/searchBook@post->{\"key\":\"${key}\", \"bookSourceCode\":\"d604e908fb5d0641ad7f4e2a90cb0a72\"}",
     "charset": "utf-8",
