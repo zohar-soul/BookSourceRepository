@@ -3,14 +3,14 @@
   "url": "https://www.yawen365.com",
   "version": 103,
   "search": {
-    "url": "https://api.yuedu.best/yuedu/searchBook@post->{\"key\":\"${key}\", \"bookSourceUrl\":\"https://www.yawen365.com\"}",
+    "url": "https://api.yuedu.best/yuedu/searchBook@post->{\"key\":\"${key}\", \"bookSourceUrl\":\"http://www.b5200.net\"}",
     "charset": "utf-8",
     "list": "$.[*]",
     "name": "$.name",
     "author": "$.author",
     "cover": "$.coverUrl",
     "summary": "$.intro",
-    "detail": "https://api.yuedu.best/yuedu/getBookInfo@post->{\"bookUrl\":\"${$.bookUrl}\", \"bookSourceUrl\":\"https://www.yawen365.com\"}"
+    "detail": "https://api.yuedu.best/yuedu/getBookInfo@post->{\"bookUrl\":\"${$.bookUrl}\", \"bookSourceUrl\":\"http://www.b5200.net\"}"
   },
   "detail": {
     "name": "$.name",
@@ -20,12 +20,12 @@
     "status": "",
     "update": "$.latestChapterTime",
     "lastChapter": "$.latestChapterTitle",
-    "catalog": "https://api.yuedu.best/yuedu/getChapterList@post->{\"tocUrl\":\"${$.tocUrl}\", \"bookSourceUrl\":\"https://www.yawen365.com\"}"
+    "catalog": "https://api.yuedu.best/yuedu/getChapterList@post->{\"tocUrl\":\"${$.tocUrl}\", \"bookSourceUrl\":\"http://www.b5200.net\"}"
   },
   "catalog": {
     "list": "$.[*]",
     "name": "$.title",
-    "chapter": "https://api.yuedu.best/yuedu/getContent@post->{\"bookChapterUrl\":\"${$.url}\", \"bookSourceUrl\":\"https://www.yawen365.com\"}"
+    "chapter": "https://api.yuedu.best/yuedu/getContent@post->{\"bookChapterUrl\":\"${$.url}\", \"bookSourceUrl\":\"http://www.b5200.net\"}"
   },
   "chapter": {
     "content": "$.text"
